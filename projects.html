@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — 최재성 UX·UI Designer</title>
+  <meta name="description" content="최재성의 프로젝트 케이스 스터디 — 문제 정의부터 설계·해결까지." />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Mono:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader__row"><span class="loader__word">PROJECTS</span><span class="loader__count" id="loaderCount">000</span></div>
+    <div class="loader__bar"><span id="loaderBar"></span></div>
+  </div>
+  <div class="cursor" id="cursor"><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="progress" id="progress"><span></span></div>
+
+  <header class="topbar">
+    <a href="index.html" class="brand" data-cursor>최재성<sup>®</sup></a>
+    <span class="topbar__status"><i></i>Open to opportunities — 2026</span>
+    <button class="menu-btn" id="menuBtn" data-cursor><span></span><span></span></button>
+  </header>
+  <nav class="menu" id="menu">
+    <ul class="menu__list">
+      <li><a href="work.html" data-cursor><span class="menu__idx">01</span>Work</a></li>
+      <li><a href="projects.html" data-cursor><span class="menu__idx">02</span>Projects</a></li>
+      <li><a href="about.html" data-cursor><span class="menu__idx">03</span>About</a></li>
+      <li><a href="contact.html" data-cursor><span class="menu__idx">04</span>Contact</a></li>
+    </ul>
+    <div class="menu__foot"><span>sung774@naver.com</span><span>Seoul, KR</span></div>
+  </nav>
+
+  <main class="page">
+    <section class="masthead">
+      <p class="mono masthead__eyebrow">(Projects) — Case Studies</p>
+      <h1 class="masthead__title reveal">Case<br /><em>Studies</em></h1>
+      <div class="masthead__meta">
+        <p class="reveal" data-delay="0.1">문제를 어떻게 정의하고, 어떤 근거로 설계했는지 — 8개 프로젝트의 과정입니다.</p>
+        <p class="mono reveal" data-delay="0.15" style="align-self:flex-end;">01 — 08</p>
+      </div>
+    </section>
+
+    <!-- ===== 01. CPASS ===== -->
+    <article class="case" id="cpass">
+      <div class="case__head">
+        <p class="mono case__idx reveal">01 / CPASS</p>
+        <h2 class="case__title reveal" data-delay="0.05">CPASS</h2>
+        <p class="case__sub reveal" data-delay="0.1">보유 중인 가상자산을 한 곳에 모아 쉽고 간편하게 운용하는 지갑 앱. 다크 톤과 글래스모피즘으로 전문성·미래지향적 무드를 완성했습니다.</p>
+      </div>
+      <dl class="case__facts reveal">
+        <div class="case__fact"><dt>Role</dt><dd>참여 2명 · 기여도 80%</dd></div>
+        <div class="case__fact"><dt>Client</dt><dd>(주)콰가</dd></div>
+        <div class="case__fact"><dt>Year</dt><dd>2022</dd></div>
+        <div class="case__fact"><dt>Tools</dt><dd>Adobe XD</dd></div>
+        <div class="case__fact"><dt>Type</dt><dd>App · Web</dd></div>
+      </dl>
+      <div class="case__cover reveal"><figure class="ph ph--wide"><span class="ph__name mono">images/projects/cpass/cpass-cover.jpg</span><span class="ph__dim mono">1600×900</span></figure></div>
+      <div class="case__cols">
+        <div class="case__col reveal"><h4>Problem</h4><p>코인 스왑과 자산 관리는 노출되는 정보가 많아 복잡하고, 다양한 연령층에게 진입장벽이 높았습니다.</p></div>
+        <div class="case__col reveal" data-delay="0.08"><h4>Solution</h4><p>정보의 중요도에 따라 컬러·폰트 레벨을 부여하고, 코인 심볼 컬러를 그래프에 그대로 사용해 이름을 읽지 않아도 색으로 구별되게 했습니다. 하단 슬라이드 형태로 Depth를 줄여 이탈률을 낮췄습니다.</p></div>
+      </div>
+      <div class="case__gallery">
+        <div class="g g--8 reveal"><figure class="ph"><span class="ph__name mono">images/projects/cpass/cpass-01.jpg</span><span class="ph__dim mono">자산 현황 대시보드 · 1040×780</span></figure></div>
+        <div class="g g--4 reveal" data-delay="0.06"><figure class="ph ph--phone"><span class="ph__name mono">images/projects/cpass/cpass-02.jpg</span><span class="ph__dim mono">스왑 페이지</span></figure></div>
+        <div class="g g--full reveal"><figure class="ph ph--full"><span class="ph__name mono">images/projects/cpass/cpass-03.jpg</span><span class="ph__dim mono">웹 랜딩 (글래스모피즘) · 1600×720</span></figure></div>
+      </div>
+      <div class="case__foot"><a href="work.html" class="btn" data-cursor>← All Work</a><a href="contact.html" class="btn" data-cursor>Contact →</a></div>
+    </article>
+
+    <!-- ===== 02. 바로산책 ===== -->
+    <article class="case" id="baro">
+      <div class="case__head">
+        <p class="mono case__idx reveal">02 / BARO</p>
+        <h2 class="case__title reveal" data-delay="0.05">바로산책</h2>
+        <p class="case__sub reveal" data-delay="0.1">바쁜 반려인을 위한 반려동물 산책 긱플랫폼. 당일 신청이 가능한 자동화 매칭 시스템으로 걱정을 덜어줍니다.</p>
+      </div>
+      <dl class="case__facts reveal">
+        <div class="case__fact"><dt>Role</dt><dd>1명 · 기획·설계·디자인 100%</dd></div>
+        <div class="case__fact"><dt>Client</dt><dd>(주)브이아이펫</dd></div>
+        <div class="case__fact"><dt>Year</dt><dd>2022</dd></div>
+        <div class="case__fact"><dt>Tools</dt><dd>Adobe XD</dd></div>
+        <div class="case__fact"><dt>Type</dt><dd>App</dd></div>
+      </dl>
+      <div class="case__cover reveal"><figure class="ph ph--wide"><span class="ph__name mono">images/projects/baro/baro-cover.jpg</span><span class="ph__dim mono">1600×900</span></figure></div>
+      <div class="case__cols">
+        <div class="case__col reveal"><h4>Problem</h4><p>잦은 야근·외박으로 반려견 산책이 어렵고, 비전문 펫워커에 대한 불신과 복잡한 가입·예약 과정이 진입을 막고 있었습니다.</p></div>
+        <div class="case__col reveal" data-delay="0.08"><h4>Solution</h4><p>사용자 인터뷰에서 출발해 반려견 정보·접종여부 등록, 위치기반 실시간 산책 확인, 연락처 없이 가능한 매니저 채팅을 설계했습니다. SNS 로그인과 단계형 예약으로 가입·결제의 Depth를 최소화했습니다.</p></div>
+      </div>
+      <div class="case__gallery">
+        <div class="g g--4 reveal"><figure class="ph ph--phone"><span class="ph__name mono">images/projects/baro/baro-01.jpg</span><span class="ph__dim mono">메인</span></figure></div>
+        <div class="g g--8 reveal" data-delay="0.06"><figure class="ph"><span class="ph__name mono">images/projects/baro/baro-02.jpg</span><span class="ph__dim mono">실시간 산책 · 지도 · 1040×780</span></figure></div>
+        <div class="g g--full reveal"><figure class="ph ph--full"><span class="ph__name mono">images/projects/baro/baro-03.jpg</span><span class="ph__dim mono">예약·결제 플로우 · 1600×720</span></figure></div>
+      </div>
+      <div class="case__foot"><a href="work.html" class="btn" data-cursor>← All Work</a><a href="contact.html" class="btn" data-cursor>Contact →</a></div>
+    </article>
+
+    <!-- ===== 03. GK OPS ===== -->
+    <article class="case" id="gkops">
+      <div class="case__head">
+        <p class="mono case__idx reveal">03 / GK OPS</p>
+        <h2 class="case__title reveal" data-delay="0.05">GK OPS</h2>
+        <p class="case__sub reveal" data-delay="0.1">배차·관제 시스템 대시보드 리디자인. 기획팀과 개발팀의 상충하는 요구를 조율해 정보량과 속도를 동시에 잡았습니다.</p>
+      </div>
+      <dl class="case__facts reveal">
+        <div class="case__fact"><dt>Role</dt><dd>UX 리디자인 · 이해관계자 조율</dd></div>
+        <div class="case__fact"><dt>Client</dt><dd>(주)그라운드케이</dd></div>
+        <div class="case__fact"><dt>Year</dt><dd>2023</dd></div>
+        <div class="case__fact"><dt>Tools</dt><dd>Figma</dd></div>
+        <div class="case__fact"><dt>Type</dt><dd>B2B Dashboard</dd></div>
+      </dl>
+      <div class="case__cover reveal"><figure class="ph ph--wide"><span class="ph__name mono">images/projects/gkops/gkops-cover.jpg</span><span class="ph__dim mono">1600×900</span></figure></div>
+      <div class="case__cols">
+        <div class="case__col reveal"><h4>Problem</h4><p>기획팀은 20개 이상의 정보를 한 화면에, 개발팀은 로딩 속도 때문에 핵심만 보여주길 원했습니다. 양쪽 모두 물러서지 않아 일정이 지연됐습니다.</p></div>
+        <div class="case__col reveal" data-delay="0.08"><h4>Solution</h4><p>정보를 ‘자주 보는 것 / 가끔 보는 것’으로 재분류하고 단계별 로딩을 제안했습니다. Figma로 3단계 로딩 구조를 실제 화면으로 시각화해 양팀을 설득했고, 이 구조는 현재 사내 모든 B2B 대시보드의 표준이 되었습니다.</p></div>
+      </div>
+      <div class="case__gallery">
+        <div class="g g--full reveal"><figure class="ph ph--full"><span class="ph__name mono">images/projects/gkops/gkops-01.jpg</span><span class="ph__dim mono">정보구조 · 3단계 로딩 다이어그램 · 1600×720</span></figure></div>
+        <div class="g reveal"><figure class="ph ph--wide"><span class="ph__name mono">images/projects/gkops/gkops-02.jpg</span><span class="ph__dim mono">대시보드 메인</span></figure></div>
+        <div class="g reveal" data-delay="0.06"><figure class="ph ph--wide"><span class="ph__name mono">images/projects/gkops/gkops-03.jpg</span><span class="ph__dim mono">상세 리포트</span></figure></div>
+      </div>
+      <div class="case__foot"><a href="work.html" class="btn" data-cursor>← All Work</a><a href="contact.html" class="btn" data-cursor>Contact →</a></div>
+    </article>
+
+    <!-- ===== 04. 산단타요 ===== -->
+    <article class="case" id="sandan">
+      <div class="case__head">
+        <p class="mono case__idx reveal">04 / SANDAN</p>
+        <h2 class="case__title reveal" data-delay="0.05">산단타요</h2>
+        <p class="case__sub reveal" data-delay="0.1">산업단지 이용자를 위한 이동·정보 서비스 앱. 그라운드케이에서 총괄 디자인을 맡았습니다.</p>
+      </div>
+      <dl class="case__facts reveal">
+        <div class="case__fact"><dt>Role</dt><dd>총괄 디자인</dd></div>
+        <div class="case__fact"><dt>Client</dt><dd>(주)그라운드케이</dd></div>
+        <div class="case__fact"><dt>Year</dt><dd>2023</dd></div>
+        <div class="case__fact"><dt>Tools</dt><dd>Figma</dd></div>
+        <div class="case__fact"><dt>Type</dt><dd>App</dd></div>
+      </dl>
+      <div class="case__cover reveal"><figure class="ph ph--wide"><span class="ph__name mono">images/projects/sandan/sandan-cover.jpg</span><span class="ph__dim mono">1600×900</span></figure></div>
+      <div class="case__cols">
+        <div class="case__col reveal"><h4>Problem</h4><p>산업단지 내 이동과 정보 접근이 흩어져 있어, 이용자가 필요한 정보를 빠르게 찾기 어려웠습니다.</p></div>
+        <div class="case__col reveal" data-delay="0.08"><h4>Solution</h4><p>핵심 기능을 우선순위로 재구성하고 직관적인 정보구조와 간결한 플로우를 설계해, 누구나 쉽게 쓰도록 총괄 디자인을 진행했습니다.</p></div>
+      </div>
+      <div class="case__gallery">
+        <div class="g g--8 reveal"><figure class="ph"><span class="ph__name mono">images/projects/sandan/sandan-01.jpg</span><span class="ph__dim mono">메인 · 1040×780</span></figure></div>
+        <div class="g g--4 reveal" data-delay="0.06"><figure class="ph ph--phone"><span class="ph__name mono">images/projects/sandan/sandan-02.jpg</span><span class="ph__dim mono">주요 기능</span></figure></div>
+        <div class="g g--full reveal"><figure class="ph ph--full"><span class="ph__name mono">images/projects/sandan/sandan-03.jpg</span><span class="ph__dim mono">상세 화면 · 1600×720</span></figure></div>
+      </div>
+      <div class="case__foot"><a href="work.html" class="btn" data-cursor>← All Work</a><a href="contact.html" class="btn" data-cursor>Contact →</a></div>
+    </article>
+
+    <!-- ===== 05. ICYA ===== -->
+    <article class="case" id="icya">
+      <div class="case__head">
+        <p class="mono case__idx reveal">05 / ICYA</p>
+        <h2 class="case__title reveal" data-delay="0.05">ICYA</h2>
+        <p class="case__sub reveal" data-delay="0.1">인천 영종도 요트 체험·강의 브랜드 사이트. 자사 BI를 각인시키는 것을 1순위로, 전문성·모던·프리미엄을 담았습니다.</p>
+      </div>
+      <dl class="case__facts reveal">
+        <div class="case__fact"><dt>Role</dt><dd>1명 · 디자인 100%</dd></div>
+        <div class="case__fact"><dt>Client</dt><dd>인천요트아카데미 (외주)</dd></div>
+        <div class="case__fact"><dt>Year</dt><dd>2022</dd></div>
+        <div class="case__fact"><dt>Tools</dt><dd>Photoshop</dd></div>
+        <div class="case__fact"><dt>Type</dt><dd>Web · BI</dd></div>
+      </dl>
+      <div class="case__cover reveal"><figure class="ph ph--wide"><span class="ph__name mono">images/projects/icya/icya-cover.jpg</span><span class="ph__dim mono">1600×900</span></figure></div>
+      <div class="case__cols">
+        <div class="case__col reveal"><h4>Problem</h4><p>신생 브랜드로 인지도가 없어, 요트가 주는 프리미엄과 전문성을 첫 화면에서 직관적으로 전달해야 했습니다.</p></div>
+        <div class="case__col reveal" data-delay="0.08"><h4>Solution</h4><p>모던·프리미엄 로고를 만들고 노을진 세일링 비주얼을 중심에 배치했습니다. 메인 비주얼에 로고를 얹어 브랜드를 각인시키고, 호버 확대·클릭 이동 인터랙션으로 몰입감을 더했습니다.</p></div>
+      </div>
+      <div class="case__gallery">
+        <div class="g reveal"><figure class="ph ph--wide"><span class="ph__name mono">images/projects/icya/icya-01.jpg</span><span class="ph__dim mono">로고 시스템</span></figure></div>
+        <div class="g reveal" data-delay="0.06"><figure class="ph ph--wide"><span class="ph__name mono">images/projects/icya/icya-02.jpg</span><span class="ph__dim mono">메인 비주얼</span></figure></div>
+        <div class="g g--full reveal"><figure class="ph ph--full"><span class="ph__name mono">images/projects/icya/icya-03.jpg</span><span class="ph__dim mono">서브페이지 (클럽하우스·파티·세일링) · 1600×720</span></figure></div>
+      </div>
+      <div class="case__foot"><a href="work.html" class="btn" data-cursor>← All Work</a><a href="contact.html" class="btn" data-cursor>Contact →</a></div>
+    </article>
+
+    <!-- ===== 06. POCA ===== -->
+    <article class="case" id="poca">
+      <div class="case__head">
+        <p class="mono case__idx reveal">06 / POCA</p>
+        <h2 class="case__title reveal" data-delay="0.05">POCA</h2>
+        <p class="case__sub reveal" data-delay="0.1">세상의 모든 최애 포토카드. 단순 거래를 넘어 팬덤 커뮤니티를 겸한 아이돌 포토카드 플랫폼입니다.</p>
+      </div>
+      <dl class="case__facts reveal">
+        <div class="case__fact"><dt>Role</dt><dd>2명 · 기획·설계 50% · 디자인 100%</dd></div>
+        <div class="case__fact"><dt>Client</dt><dd>인더엑스</dd></div>
+        <div class="case__fact"><dt>Year</dt><dd>2020</dd></div>
+        <div class="case__fact"><dt>Tools</dt><dd>Adobe XD</dd></div>
+        <div class="case__fact"><dt>Type</dt><dd>App</dd></div>
+      </dl>
+      <div class="case__cover reveal"><figure class="ph ph--wide"><span class="ph__name mono">images/projects/poca/poca-cover.jpg</span><span class="ph__dim mono">1600×900</span></figure></div>
+      <div class="case__cols">
+        <div class="case__col reveal"><h4>Problem</h4><p>포토카드 거래는 단순 매매를 넘어선 팬덤 활동이 필요했고, 사진 위주의 많은 콘텐츠를 깔끔하게 구분해야 했습니다.</p></div>
+        <div class="case__col reveal" data-delay="0.08"><h4>Solution</h4><p>‘오늘의 매칭·친구 매칭’ 기반 거래, 관심 아이돌 페이지, SNS식 팔로우로 팬덤을 확장했습니다. 사진 위주의 깔끔하고 직관적인 UI로 콘텐츠를 편안하게 탐색하게 했습니다.</p></div>
+      </div>
+      <div class="case__gallery">
+        <div class="g g--4 reveal"><figure class="ph ph--phone"><span class="ph__name mono">images/projects/poca/poca-01.jpg</span><span class="ph__dim mono">메인</span></figure></div>
+        <div class="g g--8 reveal" data-delay="0.06"><figure class="ph"><span class="ph__name mono">images/projects/poca/poca-02.jpg</span><span class="ph__dim mono">매칭 거래 · 1040×780</span></figure></div>
+        <div class="g g--full reveal"><figure class="ph ph--full"><span class="ph__name mono">images/projects/poca/poca-03.jpg</span><span class="ph__dim mono">아이돌 페이지 · 앨범 포토카드 · 1600×720</span></figure></div>
+      </div>
+      <div class="case__foot"><a href="work.html" class="btn" data-cursor>← All Work</a><a href="contact.html" class="btn" data-cursor>Contact →</a></div>
+    </article>
+
+    <!-- ===== 07. FITNAVI ===== -->
+    <article class="case" id="fitnavi">
+      <div class="case__head">
+        <p class="mono case__idx reveal">07 / FITNAVI</p>
+        <h2 class="case__title reveal" data-delay="0.05">FITNAVI</h2>
+        <p class="case__sub reveal" data-delay="0.1">트레이너 없이 나 혼자 운동 루틴을 정하는 피트니스 내비게이션. 직관·전문·신뢰를 담아 설계했습니다.</p>
+      </div>
+      <dl class="case__facts reveal">
+        <div class="case__fact"><dt>Role</dt><dd>1명 · 디자인 100%</dd></div>
+        <div class="case__fact"><dt>Client</dt><dd>인더엑스</dd></div>
+        <div class="case__fact"><dt>Year</dt><dd>2021</dd></div>
+        <div class="case__fact"><dt>Tools</dt><dd>Adobe XD</dd></div>
+        <div class="case__fact"><dt>Type</dt><dd>App</dd></div>
+      </dl>
+      <div class="case__cover reveal"><figure class="ph ph--wide"><span class="ph__name mono">images/projects/fitnavi/fitnavi-cover.jpg</span><span class="ph__dim mono">1600×900</span></figure></div>
+      <div class="case__cols">
+        <div class="case__col reveal"><h4>Problem</h4><p>운동 초보자는 무엇을 어떤 순서로 해야 할지 막막하고, 트레이너 없이 체계적인 루틴을 잡기 어려웠습니다.</p></div>
+        <div class="case__col reveal" data-delay="0.08"><h4>Solution</h4><p>주별 추천 프로그램, 부위별 일러스트 검색, 일자별 운동 일정, 목표 체중 원형 그래프를 제공했습니다. 다크·화이트 모드를 겸해 사용자의 성향에 맞췄습니다.</p></div>
+      </div>
+      <div class="case__gallery">
+        <div class="g g--8 reveal"><figure class="ph"><span class="ph__name mono">images/projects/fitnavi/fitnavi-01.jpg</span><span class="ph__dim mono">메인 (다크) · 1040×780</span></figure></div>
+        <div class="g g--4 reveal" data-delay="0.06"><figure class="ph ph--phone"><span class="ph__name mono">images/projects/fitnavi/fitnavi-02.jpg</span><span class="ph__dim mono">부위별 검색</span></figure></div>
+        <div class="g g--full reveal"><figure class="ph ph--full"><span class="ph__name mono">images/projects/fitnavi/fitnavi-03.jpg</span><span class="ph__dim mono">목표 체중 · 내 프로그램 · 1600×720</span></figure></div>
+      </div>
+      <div class="case__foot"><a href="work.html" class="btn" data-cursor>← All Work</a><a href="contact.html" class="btn" data-cursor>Contact →</a></div>
+    </article>
+
+    <!-- ===== 08. GROUND K ===== -->
+    <article class="case" id="groundk">
+      <div class="case__head">
+        <p class="mono case__idx reveal">08 / GROUND K</p>
+        <h2 class="case__title reveal" data-delay="0.05">GROUND K</h2>
+        <p class="case__sub reveal" data-delay="0.1">그라운드케이 자사 웹사이트 총괄 디자인. 기업의 신뢰와 서비스 이해를 돕는 디지털 아이덴티티를 만들었습니다.</p>
+      </div>
+      <dl class="case__facts reveal">
+        <div class="case__fact"><dt>Role</dt><dd>총괄 디자인</dd></div>
+        <div class="case__fact"><dt>Client</dt><dd>(주)그라운드케이</dd></div>
+        <div class="case__fact"><dt>Year</dt><dd>2023</dd></div>
+        <div class="case__fact"><dt>Tools</dt><dd>Figma</dd></div>
+        <div class="case__fact"><dt>Type</dt><dd>Web</dd></div>
+      </dl>
+      <div class="case__cover reveal"><figure class="ph ph--wide"><span class="ph__name mono">images/projects/groundk/groundk-cover.jpg</span><span class="ph__dim mono">1600×900</span></figure></div>
+      <div class="case__cols">
+        <div class="case__col reveal"><h4>Problem</h4><p>기업과 서비스를 처음 접하는 방문자에게 신뢰감을 주고, 무엇을 하는 회사인지 빠르게 전달해야 했습니다.</p></div>
+        <div class="case__col reveal" data-delay="0.08"><h4>Solution</h4><p>명확한 정보구조와 일관된 비주얼 시스템으로 브랜드의 디지털 인상을 정리하고, 핵심 서비스를 단계적으로 이해하도록 구성했습니다.</p></div>
+      </div>
+      <div class="case__gallery">
+        <div class="g g--full reveal"><figure class="ph ph--full"><span class="ph__name mono">images/projects/groundk/groundk-01.jpg</span><span class="ph__dim mono">메인 페이지 · 1600×720</span></figure></div>
+        <div class="g reveal"><figure class="ph ph--wide"><span class="ph__name mono">images/projects/groundk/groundk-02.jpg</span><span class="ph__dim mono">서비스 섹션</span></figure></div>
+        <div class="g reveal" data-delay="0.06"><figure class="ph ph--wide"><span class="ph__name mono">images/projects/groundk/groundk-03.jpg</span><span class="ph__dim mono">서브 페이지</span></figure></div>
+      </div>
+      <div class="case__foot"><a href="work.html" class="btn" data-cursor>← All Work</a><a href="contact.html" class="btn" data-cursor>Contact →</a></div>
+    </article>
+
+    <!-- 컴팩트 푸터 -->
+    <footer class="pagefoot">
+      <p class="mono" style="margin-bottom:1.25rem">(→) Let's work together</p>
+      <div class="pagefoot__cta"><a href="contact.html" data-cursor data-magnetic>함께 일하기 →</a></div>
+      <div class="pagefoot__row">
+        <div class="pagefoot__nav">
+          <a href="work.html" data-cursor>Work</a><a href="projects.html" data-cursor>Projects</a>
+          <a href="about.html" data-cursor>About</a><a href="contact.html" data-cursor>Contact</a>
+        </div>
+        <span class="mono">© 2026 최재성 (CHOI JAE SEONG)</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/pages.js"></script>
+</body>
+</html>

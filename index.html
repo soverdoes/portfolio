@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>최재성 — UX·UI Designer Portfolio</title>
+  <meta name="description" content="예쁘기만 한 화면이 아니라 사용자의 근본 문제를 해결하는 설계에 집중하는 UX·UI 디자이너 최재성의 포트폴리오." />
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Mono:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ===== 로더 ===== -->
+  <div class="loader" id="loader">
+    <div class="loader__row">
+      <span class="loader__word">CHOI JAE SEONG</span>
+      <span class="loader__count" id="loaderCount">000</span>
+    </div>
+    <div class="loader__bar"><span id="loaderBar"></span></div>
+  </div>
+
+  <!-- ===== 전역 UI ===== -->
+  <div class="cursor" id="cursor"><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="progress" id="progress"><span></span></div>
+
+  <header class="topbar">
+    <a href="#top" class="brand" data-cursor>최재성<sup>®</sup></a>
+    <span class="topbar__status"><i></i>Open to opportunities — 2026</span>
+    <button class="menu-btn" id="menuBtn" data-cursor><span></span><span></span></button>
+  </header>
+
+  <nav class="menu" id="menu">
+    <ul class="menu__list">
+      <li><a href="work.html" data-cursor><span class="menu__idx">01</span>Work</a></li>
+      <li><a href="projects.html" data-cursor><span class="menu__idx">02</span>Projects</a></li>
+      <li><a href="about.html" data-cursor><span class="menu__idx">03</span>About</a></li>
+      <li><a href="contact.html" data-cursor><span class="menu__idx">04</span>Contact</a></li>
+    </ul>
+    <div class="menu__foot"><span>sung774@naver.com</span><span>Seoul, KR</span></div>
+  </nav>
+
+  <main id="top">
+    <!-- ===== 01. HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__top">
+        <span class="mono">(UX · UI Designer)</span>
+        <span class="mono">Seoul, KR — Since 2020</span>
+      </div>
+      <h1 class="hero__title">
+        <span class="line"><span class="word">DESIGN</span></span>
+        <span class="line"><span class="word">THAT</span></span>
+        <span class="line"><em class="word">SOLVES</em><span class="word">™</span></span>
+      </h1>
+      <div class="hero__bottom">
+        <p class="hero__lead">
+          예쁘기만 한 화면이 아니라, 사용자의 <strong>근본 문제를 푸는 설계</strong>.<br />
+          근거로 설득하는 UX·UI 디자이너 <strong>최재성</strong>입니다.
+        </p>
+        <a href="#work" class="scroll-hint" data-cursor>
+          <span class="mono">Scroll to explore</span>
+          <span class="scroll-hint__line"></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== 02. MANIFESTO (단어별 하이라이트) ===== -->
+    <section class="manifesto">
+      <p class="mono manifesto__label">(01) Manifesto</p>
+      <h2 class="manifesto__text" data-highlight>
+        저는 화면을 예쁘게 그리는 사람이 아니라, 사용자의 근본적인 문제를 해결하는 설계를 하는 사람입니다.
+        모든 UI 결정은 신뢰를 높이는가, 전환율을 올리는가라는 질문에 근거로 답할 수 있어야 합니다.
+        기획의 목표와 개발의 제약 사이에서 최적의 답을 찾을 때 디자인은 가장 강력해집니다.
+      </h2>
+    </section>
+
+    <!-- ===== 03. MARQUEE ===== -->
+    <div class="marquee" id="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>UX/UI DESIGN ✳ SERVICE PLANNING ✳ MOBILE APP ✳ WEB DESIGN ✳ BRANDING ✳ PROTOTYPING ✳&nbsp;</span>
+        <span>UX/UI DESIGN ✳ SERVICE PLANNING ✳ MOBILE APP ✳ WEB DESIGN ✳ BRANDING ✳ PROTOTYPING ✳&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ===== 04. SELECTED WORK (핀 고정 가로 스크롤) ===== -->
+    <section class="work" id="work">
+      <div class="work__pin" id="workPin">
+        <div class="work__head">
+          <p class="mono">(02) Selected Work</p>
+          <p class="work__count"><span id="workNow">01</span> <i>/ 08</i></p>
+        </div>
+        <div class="work__track" id="workTrack">
+          <a class="proj" href="projects.html#cpass" data-cursor data-cursor-label="View" style="--accent:#7c5cff">
+            <div class="proj__media"><img src="images/thumbs/cpass.jpg" alt="CPASS 프로젝트 썸네일" /></div>
+            <div class="proj__info"><span class="proj__no">01</span><h3>CPASS</h3><span class="proj__cat">Crypto Wallet · App/Web</span></div>
+          </a>
+          <a class="proj" href="projects.html#baro" data-cursor data-cursor-label="View" style="--accent:#2b6fff">
+            <div class="proj__media"><img src="images/thumbs/baro.jpg" alt="바로산책 프로젝트 썸네일" /></div>
+            <div class="proj__info"><span class="proj__no">02</span><h3>바로산책</h3><span class="proj__cat">Pet Platform · App</span></div>
+          </a>
+          <a class="proj" href="projects.html#gkops" data-cursor data-cursor-label="View" style="--accent:#12b39a">
+            <div class="proj__media"><img src="images/thumbs/gkops.jpg" alt="GK OPS 프로젝트 썸네일" /></div>
+            <div class="proj__info"><span class="proj__no">03</span><h3>GK OPS</h3><span class="proj__cat">B2B Dashboard · UX</span></div>
+          </a>
+          <a class="proj" href="projects.html#sandan" data-cursor data-cursor-label="View" style="--accent:#ff7a2b">
+            <div class="proj__media"><img src="images/thumbs/sandan.jpg" alt="산단타요 프로젝트 썸네일" /></div>
+            <div class="proj__info"><span class="proj__no">04</span><h3>산단타요</h3><span class="proj__cat">Public Service · App</span></div>
+          </a>
+          <a class="proj" href="projects.html#icya" data-cursor data-cursor-label="View" style="--accent:#b98a5e">
+            <div class="proj__media"><img src="images/thumbs/icya.jpg" alt="ICYA 프로젝트 썸네일" /></div>
+            <div class="proj__info"><span class="proj__no">05</span><h3>ICYA</h3><span class="proj__cat">Yacht Club · Web</span></div>
+          </a>
+          <a class="proj" href="projects.html#poca" data-cursor data-cursor-label="View" style="--accent:#ff5a7a">
+            <div class="proj__media"><img src="images/thumbs/poca.jpg" alt="POCA 프로젝트 썸네일" /></div>
+            <div class="proj__info"><span class="proj__no">06</span><h3>POCA</h3><span class="proj__cat">Community · App</span></div>
+          </a>
+          <a class="proj" href="projects.html#fitnavi" data-cursor data-cursor-label="View" style="--accent:#b6e84a">
+            <div class="proj__media"><img src="images/thumbs/fitnavi.jpg" alt="FITNAVI 프로젝트 썸네일" /></div>
+            <div class="proj__info"><span class="proj__no">07</span><h3>FITNAVI</h3><span class="proj__cat">Fitness · App</span></div>
+          </a>
+          <a class="proj" href="projects.html#groundk" data-cursor data-cursor-label="View" style="--accent:#8a8fa8">
+            <div class="proj__media"><img src="images/thumbs/groundk.jpg" alt="GROUND K 프로젝트 썸네일" /></div>
+            <div class="proj__info"><span class="proj__no">08</span><h3>GROUND&nbsp;K</h3><span class="proj__cat">Corporate · Web</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 05. SIGNATURE PROJECTS (풀블리드 3개) ===== -->
+    <section class="spotlights" id="signature">
+      <div class="spotlights__head">
+        <p class="mono">(03) Signature Projects</p>
+        <h2 class="spotlights__title">Signature<br /><em>Work</em></h2>
+      </div>
+
+      <article class="spotlight spot--left">
+        <div class="spotlight__media">
+          <img src="images/projects/cpass/cpass-cover.jpg" alt="CPASS 대표 이미지" />
+          <div class="spotlight__overlay">
+            <span class="mono">Nº01</span>
+            <h3 class="spotlight__title">CPASS</h3>
+            <p class="spotlight__desc mono">Crypto Wallet · (주)콰가 · 2022</p>
+          </div>
+        </div>
+        <div class="spotlight__meta">
+          <p>보유 중인 가상자산을 한 곳에 모아 관리하는 지갑 앱. 다크 톤과 글래스모피즘으로 전문성·미래지향적 무드를 잡고, 정보의 중요도에 따라 컬러·타이포 레벨을 설계해 복잡한 데이터를 한눈에 읽히게 했습니다.</p>
+          <a href="projects.html#cpass" class="btn" data-cursor>View Case →</a>
+        </div>
+      </article>
+
+      <article class="spotlight spot--right">
+        <div class="spotlight__media">
+          <img src="images/projects/baro/baro-cover.jpg" alt="바로산책 대표 이미지" />
+          <div class="spotlight__overlay">
+            <span class="mono">Nº02</span>
+            <h3 class="spotlight__title">바로<em>산책</em></h3>
+            <p class="spotlight__desc mono">Pet Care Platform · (주)브이아이펫 · 2022</p>
+          </div>
+        </div>
+        <div class="spotlight__meta">
+          <p>바쁜 반려인을 위한 반려동물 산책 긱플랫폼. 사용자 인터뷰에서 출발해 기획·설계·디자인을 100% 단독으로 진행했고, SNS 로그인·단계형 예약으로 가입과 결제의 Depth를 최소화했습니다.</p>
+          <a href="projects.html#baro" class="btn" data-cursor>View Case →</a>
+        </div>
+      </article>
+
+      <article class="spotlight spot--center">
+        <div class="spotlight__media">
+          <img src="images/projects/gkops/gkops-cover.jpg" alt="GK OPS 대표 이미지" />
+          <div class="spotlight__overlay">
+            <span class="mono">Nº03</span>
+            <h3 class="spotlight__title">GK <em>OPS</em></h3>
+            <p class="spotlight__desc mono">B2B Dispatch Dashboard · (주)그라운드케이 · 2023</p>
+          </div>
+        </div>
+        <div class="spotlight__meta">
+          <p>배차·관제 시스템 대시보드 리디자인. 기획팀과 개발팀의 상충하는 요구를 ‘자주 보는 정보 / 가끔 보는 정보’로 재구조화하고 단계별 로딩을 제안해, 정보량과 속도를 동시에 잡았습니다. 현재 사내 모든 B2B 대시보드의 표준이 되었습니다.</p>
+          <a href="projects.html#gkops" class="btn" data-cursor>View Case →</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===== 06. APPROACH (일하는 방식 · 스티키 넘버) ===== -->
+    <section class="approach" id="approach">
+      <div class="approach__intro">
+        <p class="mono">(04) How I Work</p>
+        <h2 class="approach__title">Approach</h2>
+        <p class="approach__lead">디자인은 감이 아니라 근거입니다 — 발견하고, 조율하고, 시각화하고, 설득합니다.</p>
+      </div>
+      <ol class="approach__list">
+        <li class="astep"><span class="astep__no">01</span><div><h3>Discover</h3><p>브랜드·사용자·비즈니스 맥락을 파고들어 ‘왜’와 진짜 문제를 먼저 찾습니다.</p></div></li>
+        <li class="astep"><span class="astep__no">02</span><div><h3>Align</h3><p>이해관계자를 각각 만나 입장을 이해하고, 상충하는 요구 사이에서 공통의 기준을 정합니다.</p></div></li>
+        <li class="astep"><span class="astep__no">03</span><div><h3>Visualize</h3><p>Figma로 구조를 실제 화면으로 시각화해, 말이 아닌 눈으로 확인되는 근거를 만듭니다.</p></div></li>
+        <li class="astep"><span class="astep__no">04</span><div><h3>Persuade</h3><p>데이터와 레퍼런스 기반의 근거로 양쪽 모두를 설득하고, 최적의 플로우로 완성합니다.</p></div></li>
+      </ol>
+    </section>
+
+    <!-- ===== 07. EXPERTISE (스택 스티키 카드) ===== -->
+    <section class="services" id="services">
+      <div class="services__intro">
+        <p class="mono">(05) What I Do — Figma · Adobe XD · Photoshop · Illustrator</p>
+        <h2 class="services__title">Expertise</h2>
+      </div>
+      <div class="services__stack">
+        <article class="scard" style="--i:0">
+          <span class="scard__no mono">01</span>
+          <h3>UX/UI Design</h3>
+          <p>사용자 리서치와 정보구조 설계부터 인터랙션까지. 근거 기반으로 화면의 모든 결정을 논리적으로 설명합니다.</p>
+          <ul class="mono"><li>Research</li><li>IA</li><li>Prototyping</li></ul>
+        </article>
+        <article class="scard" style="--i:1">
+          <span class="scard__no mono">02</span>
+          <h3>Web · App Design</h3>
+          <p>모바일 앱과 반응형 웹. 브랜드에 꼭 맞는 레이아웃과 컴포넌트 시스템을 만듭니다.</p>
+          <ul class="mono"><li>Mobile</li><li>Responsive</li><li>Design System</li></ul>
+        </article>
+        <article class="scard" style="--i:2">
+          <span class="scard__no mono">03</span>
+          <h3>기획 · 설계</h3>
+          <p>단순 디자인을 넘어 서비스 기획과 플로우 설계까지. 문제 정의부터 함께합니다.</p>
+          <ul class="mono"><li>Service Planning</li><li>Flow</li><li>Strategy</li></ul>
+        </article>
+        <article class="scard" style="--i:3">
+          <span class="scard__no mono">04</span>
+          <h3>Branding · Graphic</h3>
+          <p>BI 구축과 마케팅·인쇄물까지. 브랜드 아이덴티티를 일관되게 시각화합니다.</p>
+          <ul class="mono"><li>BI</li><li>Marketing</li><li>Print</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== 08. NUMBERS (비대칭 + 카운트업) ===== -->
+    <section class="numbers">
+      <div class="stat"><div class="stat__v"><span data-count="4">0</span></div><p class="mono">Years in UX·UI</p></div>
+      <div class="stat"><div class="stat__v"><span data-count="8">0</span></div><p class="mono">Featured projects</p></div>
+      <div class="stat"><div class="stat__v"><span data-count="60">0</span>%</div><p class="mono">Sign-up increase</p></div>
+      <div class="stat"><div class="stat__v"><span data-count="40">0</span>%</div><p class="mono">Sales uplift</p></div>
+    </section>
+
+    <div class="marquee marquee--alt" aria-hidden="true">
+      <div class="marquee__track">
+        <span>LET'S BUILD SOMETHING USEFUL ✳ 사용자의 문제를 함께 풉니다 ✳ OPEN TO OPPORTUNITIES ✳&nbsp;</span>
+        <span>LET'S BUILD SOMETHING USEFUL ✳ 사용자의 문제를 함께 풉니다 ✳ OPEN TO OPPORTUNITIES ✳&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ===== 09. PHILOSOPHY (디자인 철학) ===== -->
+    <section class="philosophy" id="about">
+      <div class="philosophy__intro">
+        <p class="mono">(06) Philosophy</p>
+        <h2 class="philosophy__statement">
+          저는 예쁘기만 한 디자인을 하지 않습니다. <em>사용자의 근본 문제</em>를 해결하는 설계에 집중하고,
+          모든 결정을 <em>근거로 설명</em>할 수 있는 디자이너가 되고자 합니다.
+        </h2>
+      </div>
+      <ol class="philosophy__values">
+        <li class="pval">
+          <span class="pval__no mono">01</span>
+          <h3>어디서든 최고가 되자</h3>
+          <p>지금 있는 곳에서 최선의 결과를 쌓다 보면 그것이 모여 최고가 된다고 믿습니다.</p>
+        </li>
+        <li class="pval">
+          <span class="pval__no mono">02</span>
+          <h3>고집보다 수용과 발전</h3>
+          <p>더 나은 아이디어는 적극적으로 받아들이고, 근거가 필요한 의견은 차분히 설득합니다.</p>
+        </li>
+        <li class="pval">
+          <span class="pval__no mono">03</span>
+          <h3>생각하는 디자이너</h3>
+          <p>어떻게 해야 사용자가 편리하고 직관적인지, 니즈를 디자인으로 어떻게 녹일지 늘 고민합니다.</p>
+        </li>
+        <li class="pval">
+          <span class="pval__no mono">04</span>
+          <h3>신속·정확한 일처리</h3>
+          <p>우선순위를 매기고 하루 처리량을 계산해, 짧은 기간에도 흔들림 없이 완성합니다.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== 10. CAREER (경력 타임라인) ===== -->
+    <section class="awards career" id="career">
+      <div class="awards__head">
+        <p class="mono">(07) Career</p>
+        <h2 class="awards__title">Career</h2>
+      </div>
+      <ul class="awards__list">
+        <li class="award" data-cursor><span class="award__yr mono">2023.09 — 현재</span><span class="award__name">연구원 · 크리에이티브팀 — (주)그라운드케이</span><span class="award__proj mono">자사 웹사이트 · 산단타요 앱 총괄</span></li>
+        <li class="award" data-cursor><span class="award__yr mono">2022.09 — 2023.06</span><span class="award__name">디자인팀 — (주)콰가</span><span class="award__proj mono">자사 웹/앱 디자인 · 기획</span></li>
+        <li class="award" data-cursor><span class="award__yr mono">2021.05 — 2022.09</span><span class="award__name">대리 · 디자인팀 — (주)브이아이펫</span><span class="award__proj mono">O2O 플랫폼 UX/UI · 마케팅</span></li>
+        <li class="award" data-cursor><span class="award__yr mono">2021.02 — 2021.05</span><span class="award__name">주니어 디자이너 — 인더엑스(INTHE-X)</span><span class="award__proj mono">웹에이전시 클라이언트 웹/앱</span></li>
+        <li class="award" data-cursor><span class="award__yr mono">2013 — 2020</span><span class="award__name">시각정보디자인 전문학사 — 동양미래대학교</span><span class="award__proj mono">Visual Information Design</span></li>
+      </ul>
+    </section>
+
+    <!-- ===== 11. RECOGNITION (수상 · 자격) ===== -->
+    <section class="awards">
+      <div class="awards__head">
+        <p class="mono">(08) Recognition</p>
+        <h2 class="awards__title">Awards</h2>
+      </div>
+      <ul class="awards__list">
+        <li class="award" data-cursor><span class="award__yr mono">2020</span><span class="award__name">Red Dot Award — Design Communication</span><span class="award__proj mono">입상</span></li>
+        <li class="award" data-cursor><span class="award__yr mono">2020</span><span class="award__name">신산업 기반 창의적 종합설계 경진대회</span><span class="award__proj mono">참가</span></li>
+        <li class="award" data-cursor><span class="award__yr mono">2020</span><span class="award__name">포트폴리오 경진대회</span><span class="award__proj mono">참가</span></li>
+        <li class="award" data-cursor><span class="award__yr mono">2020</span><span class="award__name">GTQ 포토샵 1급 — 한국생산성본부</span><span class="award__proj mono">자격증</span></li>
+        <li class="award" data-cursor><span class="award__yr mono">2012</span><span class="award__name">1종 보통 운전면허</span><span class="award__proj mono">자격증</span></li>
+      </ul>
+    </section>
+
+    <!-- ===== 12. CONTACT / FOOTER ===== -->
+    <footer class="contact" id="contact">
+      <p class="mono contact__eyebrow">(09) Let's work together</p>
+      <a href="mailto:sung774@naver.com" class="contact__mail" data-cursor data-magnetic>sung774@naver.com</a>
+      <div class="contact__cta">
+        <a href="mailto:sung774@naver.com" class="btn btn--lg" data-cursor data-magnetic>함께 일하기 →</a>
+      </div>
+      <div class="contact__grid">
+        <div><span class="mono">Portfolio</span><a href="https://drive.google.com/file/d/1RPOn6yvYgYXbQMZXop09T5aPvYftp3Gq/view" target="_blank" rel="noopener" data-cursor>Portfolio PDF</a><a href="#" data-cursor>Behance</a><a href="#" data-cursor>Instagram</a></div>
+        <div><span class="mono">Contact</span><a href="mailto:sung774@naver.com" data-cursor>sung774@naver.com</a><a href="tel:+821073062013" data-cursor>+82 10 7306 2013</a></div>
+        <div><span class="mono">Info</span><span>Seoul, Korea</span><span>UX · UI Designer</span></div>
+      </div>
+      <div class="contact__base">
+        <span class="mono">© 2026 최재성 (CHOI JAE SEONG)</span>
+        <span class="mono">Designed &amp; built in Seoul</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

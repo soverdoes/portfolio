@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — 최재성 UX·UI Designer</title>
+  <meta name="description" content="UX·UI 디자이너 최재성 — 근거 기반으로 사용자의 문제를 해결하는 디자이너. 경력·철학·스킬·수상." />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Mono:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader__row"><span class="loader__word">ABOUT</span><span class="loader__count" id="loaderCount">000</span></div>
+    <div class="loader__bar"><span id="loaderBar"></span></div>
+  </div>
+  <div class="cursor" id="cursor"><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="progress" id="progress"><span></span></div>
+
+  <header class="topbar">
+    <a href="index.html" class="brand" data-cursor>최재성<sup>®</sup></a>
+    <span class="topbar__status"><i></i>Open to opportunities — 2026</span>
+    <button class="menu-btn" id="menuBtn" data-cursor><span></span><span></span></button>
+  </header>
+  <nav class="menu" id="menu">
+    <ul class="menu__list">
+      <li><a href="work.html" data-cursor><span class="menu__idx">01</span>Work</a></li>
+      <li><a href="projects.html" data-cursor><span class="menu__idx">02</span>Projects</a></li>
+      <li><a href="about.html" data-cursor><span class="menu__idx">03</span>About</a></li>
+      <li><a href="contact.html" data-cursor><span class="menu__idx">04</span>Contact</a></li>
+    </ul>
+    <div class="menu__foot"><span>sung774@naver.com</span><span>Seoul, KR</span></div>
+  </nav>
+
+  <main class="page">
+    <!-- 소개 히어로 -->
+    <section class="about-hero">
+      <div class="about-hero__intro">
+        <p class="mono" style="margin-bottom:1.5rem">(About) — CHOI JAE SEONG</p>
+        <h1 class="reveal">생각하는<br /><em>디자이너</em></h1>
+        <p class="lead reveal" data-delay="0.1">예쁘기만 한 화면이 아니라 사용자의 <strong>근본 문제를 해결</strong>하고, 모든 결정을 <strong>근거로 설명</strong>할 수 있는 UX·UI 디자이너입니다.</p>
+        <dl class="about-meta reveal" data-delay="0.15">
+          <div><dt>Name</dt><dd>최재성 (Choi Jae Seong)</dd></div>
+          <div><dt>Role</dt><dd>UX · UI Designer</dd></div>
+          <div><dt>Experience</dt><dd>총 4년</dd></div>
+          <div><dt>Base</dt><dd>Seoul, Korea</dd></div>
+          <div><dt>Email</dt><dd>sung774@naver.com</dd></div>
+        </dl>
+      </div>
+      <div class="about-hero__portrait reveal" data-delay="0.1">
+        <figure class="ph"><span class="ph__name mono">images/about/portrait.jpg</span><span class="ph__dim mono">960×1200</span></figure>
+      </div>
+    </section>
+
+    <!-- 철학 -->
+    <section class="block">
+      <div class="block__head"><h2 class="block__title reveal">Philosophy</h2><p class="mono reveal">(01) 디자인 철학</p></div>
+      <p class="reveal" style="font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,4vw,3rem);line-height:1.3;max-width:22ch;">
+        플랫폼은 <em>사용자의 신뢰</em>를 기반으로 합니다. 그래서 “이 UI가 정말 신뢰를 높이는가, 전환율을 올리는가”에 <em>근거로 답</em>할 수 있는 디자인을 합니다.
+      </p>
+    </section>
+
+    <!-- 일하는 방식 (approach 재사용) -->
+    <section class="approach" style="border-top:none;">
+      <div class="approach__intro">
+        <p class="mono reveal">(02) How I Work</p>
+        <h2 class="approach__title reveal" data-delay="0.05">Approach</h2>
+        <p class="approach__lead reveal" data-delay="0.1">디자인은 감이 아니라 근거입니다 — 발견하고, 조율하고, 시각화하고, 설득합니다.</p>
+      </div>
+      <ol class="approach__list">
+        <li class="astep reveal"><span class="astep__no">01</span><div><h3>Discover</h3><p>브랜드·사용자·비즈니스 맥락을 파고들어 ‘왜’와 진짜 문제를 먼저 찾습니다.</p></div></li>
+        <li class="astep reveal"><span class="astep__no">02</span><div><h3>Align</h3><p>이해관계자를 각각 만나 입장을 이해하고, 상충하는 요구 사이에서 공통의 기준을 정합니다.</p></div></li>
+        <li class="astep reveal"><span class="astep__no">03</span><div><h3>Visualize</h3><p>Figma로 구조를 실제 화면으로 시각화해, 말이 아닌 눈으로 확인되는 근거를 만듭니다.</p></div></li>
+        <li class="astep reveal"><span class="astep__no">04</span><div><h3>Persuade</h3><p>데이터와 레퍼런스 기반의 근거로 양쪽 모두를 설득하고, 최적의 플로우로 완성합니다.</p></div></li>
+      </ol>
+    </section>
+
+    <!-- 스킬 -->
+    <section class="block">
+      <div class="block__head"><h2 class="block__title reveal">Skills</h2><p class="mono reveal">Figma · Adobe XD · Photoshop · Illustrator</p></div>
+      <div class="skills">
+        <div class="skill reveal"><div class="skill__row"><span class="skill__name">UX/UI Design</span><span class="skill__lv">Expert</span></div><div class="skill__bar"><i style="--v:95%"></i></div></div>
+        <div class="skill reveal"><div class="skill__row"><span class="skill__name">Mobile · Web Design</span><span class="skill__lv">Expert</span></div><div class="skill__bar"><i style="--v:92%"></i></div></div>
+        <div class="skill reveal"><div class="skill__row"><span class="skill__name">기획 · 서비스 설계</span><span class="skill__lv">Advanced</span></div><div class="skill__bar"><i style="--v:85%"></i></div></div>
+        <div class="skill reveal"><div class="skill__row"><span class="skill__name">Branding · BI</span><span class="skill__lv">Advanced</span></div><div class="skill__bar"><i style="--v:82%"></i></div></div>
+        <div class="skill reveal"><div class="skill__row"><span class="skill__name">Photoshop · Illustrator</span><span class="skill__lv">GTQ 1급</span></div><div class="skill__bar"><i style="--v:90%"></i></div></div>
+        <div class="skill reveal"><div class="skill__row"><span class="skill__name">Print · 편집 디자인</span><span class="skill__lv">Proficient</span></div><div class="skill__bar"><i style="--v:75%"></i></div></div>
+      </div>
+    </section>
+
+    <!-- 성향 / 강점 -->
+    <section class="block">
+      <div class="block__head"><h2 class="block__title reveal">Personality</h2><p class="mono reveal">MBTI · ENFJ (정의로운 사회운동가)</p></div>
+      <div class="persona">
+        <div class="persona__card reveal"><span class="k">Strength 01</span><h4>뛰어난 공감능력</h4><p>사용자와 이해관계자의 입장을 먼저 이해하고, 그 사이에서 최적의 답을 찾습니다.</p></div>
+        <div class="persona__card reveal" data-delay="0.06"><span class="k">Strength 02</span><h4>감각적인 디자인</h4><p>트렌드와 브랜드를 읽고, 목적에 맞는 시각 언어로 정확하게 옮깁니다.</p></div>
+        <div class="persona__card reveal" data-delay="0.12"><span class="k">Strength 03</span><h4>능률적인 일처리</h4><p>우선순위를 매기고 하루 처리량을 계산해, 짧은 기간에도 흔들림 없이 완성합니다.</p></div>
+      </div>
+    </section>
+
+    <!-- 성과 숫자 -->
+    <section class="numbers reveal">
+      <div class="stat"><div class="stat__v"><span data-count="4">0</span></div><p class="mono">Years in UX·UI</p></div>
+      <div class="stat"><div class="stat__v"><span data-count="8">0</span></div><p class="mono">Featured projects</p></div>
+      <div class="stat"><div class="stat__v"><span data-count="60">0</span>%</div><p class="mono">Sign-up increase</p></div>
+      <div class="stat"><div class="stat__v"><span data-count="40">0</span>%</div><p class="mono">Sales uplift</p></div>
+    </section>
+
+    <!-- 경력 -->
+    <section class="awards career" style="border-top:none;">
+      <div class="awards__head"><p class="mono reveal">(03) Career</p><h2 class="awards__title reveal" data-delay="0.05">Career</h2></div>
+      <ul class="awards__list">
+        <li class="award reveal" data-cursor><span class="award__yr mono">2023.09 — 현재</span><span class="award__name">연구원 · 크리에이티브팀 — (주)그라운드케이</span><span class="award__proj mono">자사 웹사이트 · 산단타요 앱 총괄</span></li>
+        <li class="award reveal" data-cursor><span class="award__yr mono">2022.09 — 2023.06</span><span class="award__name">디자인팀 — (주)콰가</span><span class="award__proj mono">자사 웹/앱 디자인 · 기획</span></li>
+        <li class="award reveal" data-cursor><span class="award__yr mono">2021.05 — 2022.09</span><span class="award__name">대리 · 디자인팀 — (주)브이아이펫</span><span class="award__proj mono">O2O 플랫폼 UX/UI · 마케팅</span></li>
+        <li class="award reveal" data-cursor><span class="award__yr mono">2021.02 — 2021.05</span><span class="award__name">주니어 디자이너 — 인더엑스(INTHE-X)</span><span class="award__proj mono">웹에이전시 클라이언트 웹/앱</span></li>
+        <li class="award reveal" data-cursor><span class="award__yr mono">2013 — 2020</span><span class="award__name">시각정보디자인 전문학사 — 동양미래대학교</span><span class="award__proj mono">Visual Information Design</span></li>
+      </ul>
+    </section>
+
+    <!-- 수상 · 자격 -->
+    <section class="awards">
+      <div class="awards__head"><p class="mono reveal">(04) Recognition</p><h2 class="awards__title reveal" data-delay="0.05">Awards</h2></div>
+      <ul class="awards__list">
+        <li class="award reveal" data-cursor><span class="award__yr mono">2020</span><span class="award__name">Red Dot Award — Design Communication</span><span class="award__proj mono">입상</span></li>
+        <li class="award reveal" data-cursor><span class="award__yr mono">2020</span><span class="award__name">신산업 기반 창의적 종합설계 경진대회</span><span class="award__proj mono">참가</span></li>
+        <li class="award reveal" data-cursor><span class="award__yr mono">2020</span><span class="award__name">포트폴리오 경진대회</span><span class="award__proj mono">참가</span></li>
+        <li class="award reveal" data-cursor><span class="award__yr mono">2020</span><span class="award__name">GTQ 포토샵 1급 — 한국생산성본부</span><span class="award__proj mono">자격증</span></li>
+        <li class="award reveal" data-cursor><span class="award__yr mono">2012</span><span class="award__name">1종 보통 운전면허</span><span class="award__proj mono">자격증</span></li>
+      </ul>
+    </section>
+
+    <!-- 컴팩트 푸터 -->
+    <footer class="pagefoot">
+      <p class="mono" style="margin-bottom:1.25rem">(→) Let's work together</p>
+      <div class="pagefoot__cta"><a href="contact.html" data-cursor data-magnetic>함께 일하기 →</a></div>
+      <div class="pagefoot__row">
+        <div class="pagefoot__nav">
+          <a href="work.html" data-cursor>Work</a><a href="projects.html" data-cursor>Projects</a>
+          <a href="about.html" data-cursor>About</a><a href="contact.html" data-cursor>Contact</a>
+        </div>
+        <span class="mono">© 2026 최재성 (CHOI JAE SEONG)</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/pages.js"></script>
+</body>
+</html>

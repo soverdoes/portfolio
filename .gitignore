@@ -1,0 +1,11 @@
+# 이전 플레이스홀더 사이트 (배포 제외)
+_backup_easymedia/
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
+# 의존성 (있다면)
+node_modules/
