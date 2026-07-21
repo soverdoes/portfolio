@@ -155,12 +155,23 @@ section { position: relative; padding: clamp(5rem, 12vh, 11rem) var(--pad); }
 /* 실제 이미지 준비 전, 깨진 img가 아닌 조용한 자리표시로 보이도록 */
 .proj__media img, .spotlight__media > img { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); }
 .spotlight__media > img { width: 100%; height: 122%; object-fit: cover; }
-.spotlight__overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; gap: 0.75rem; padding: var(--pad); }
+/* 이미지 박스 전체를 클릭 링크로 (View Case 버튼과 동일 이동) + 호버 상태 */
+a.spotlight__media { display: block; cursor: pointer; text-decoration: none; }
+.spotlight__media::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: rgba(13,13,15,0); transition: background .45s var(--ease); }
+a.spotlight__media:hover::after { background: rgba(13,13,15,0.22); }
+.spotlight__title { transition: color .35s var(--ease); }
+a.spotlight__media:hover .spotlight__title { color: var(--accent); }
+.spotlight__overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; gap: 0.75rem; padding: var(--pad); z-index: 2; }
 .spotlight__overlay .mono { color: var(--fg); }
 .spot--right .spotlight__overlay { align-items: flex-end; text-align: right; }
 .spot--center .spotlight__overlay { align-items: center; text-align: center; }
 .spotlight__title { font-family: var(--display); font-weight: 800; font-size: clamp(3rem, 12vw, 10rem); line-height: 0.9; text-transform: uppercase; }
 .spotlight__desc { color: var(--fg); }
+.spotlight__overlay .spotlight__cta { color: var(--accent); font-weight: 700; letter-spacing: 0.02em; margin-top: 0.4rem;
+  opacity: 0; transform: translateY(8px); transition: opacity .4s var(--ease), transform .4s var(--ease); }
+a.spotlight__media:hover .spotlight__cta { opacity: 1; transform: translateY(0); }
+@media (hover: none) { .spotlight__cta { opacity: 1; transform: none; } }
 .spotlight__meta { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; padding: 2rem var(--pad) 0; }
 .spot--right .spotlight__meta { flex-direction: row-reverse; text-align: right; }
 .spotlight__meta p { max-width: 46ch; font-size: clamp(1rem, 2vw, 1.25rem); color: var(--muted); }
