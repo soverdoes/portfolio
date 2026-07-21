@@ -98,18 +98,22 @@
 .pager a:hover { color: var(--accent); }
 
 /* ============================================================ ABOUT */
-.about-hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(2rem,5vw,4rem); align-items: end;
-  padding: clamp(2rem,5vh,4rem) var(--pad) clamp(3rem,7vh,5rem); border-bottom: 1px solid var(--line); }
-.about-hero__portrait .ph { aspect-ratio: 4/5; }
-.about-hero__intro h1 { font-family: var(--display); font-weight: 800; font-size: clamp(2.6rem, 8vw, 6rem); line-height: 1.1; letter-spacing: -0.02em; word-break: keep-all; }
-.about-hero__intro h1 em { color: var(--accent); }
-.about-hero__intro .lead { margin-top: 1.5rem; color: var(--muted); font-size: clamp(1.05rem,2.2vw,1.4rem); max-width: 40ch; }
-.about-hero__intro .lead strong { color: var(--fg); font-weight: 500; }
-.about-meta { display: flex; flex-wrap: wrap; gap: 1.25rem 2.5rem; margin-top: 2rem; }
+/* 스택형: 대형 타이틀 상단 + 와이드 인물 밴드(풀블리드) + 하단 리드·메타 */
+.about-hero { padding: clamp(2rem,5vh,4rem) var(--pad) clamp(3rem,7vh,5rem); border-bottom: 1px solid var(--line); }
+.about-hero__eyebrow { margin-bottom: 1.5rem; }
+.about-hero__title { font-family: var(--display); font-weight: 800; font-size: clamp(2.8rem, 10.5vw, 9rem); line-height: 1.04; letter-spacing: -0.03em; word-break: keep-all; }
+.about-hero__title em { color: var(--accent); }
+.about-hero__band { position: relative; margin: clamp(2rem,5vh,3.5rem) calc(var(--pad) * -1) 0; height: clamp(300px, 48vh, 540px); }
+.about-hero__band .ph { width: 100%; height: 100%; border-radius: 0; border-left: 0; border-right: 0; }
+.about-hero__foot { display: flex; flex-direction: column; gap: clamp(1.75rem,4.5vh,2.75rem); margin-top: clamp(2rem,5vh,3.5rem); }
+.about-hero__foot .lead { color: var(--muted); font-size: clamp(1.05rem,2.2vw,1.4rem); max-width: 46ch; }
+.about-hero__foot .lead strong { color: var(--fg); font-weight: 500; }
+.about-hero__foot .about-meta { margin-top: 0; padding-top: clamp(1.25rem,3vh,1.75rem); border-top: 1px solid var(--line); }
+.about-meta { display: flex; flex-wrap: wrap; gap: 1.25rem 2.5rem; }
 .about-meta div { display: flex; flex-direction: column; gap: 0.3rem; }
 .about-meta dt { font-family: var(--mono); font-size: 0.62rem; text-transform: uppercase; color: var(--muted); }
 .about-meta dd { font-size: 0.95rem; }
-@media (max-width: 800px) { .about-hero { grid-template-columns: 1fr; } .about-hero__portrait { order: -1; max-width: 340px; } }
+@media (max-width: 720px) { .about-hero__band { height: clamp(240px, 40vh, 380px); } }
 
 /* 스킬 바 */
 .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem 4rem; }
