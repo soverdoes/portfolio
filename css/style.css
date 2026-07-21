@@ -103,7 +103,7 @@ section { position: relative; padding: clamp(5rem, 12vh, 11rem) var(--pad); }
     url("../images/home/hero.jpg"); }
 .hero__top, .hero__title, .hero__bottom { position: relative; z-index: 1; }
 .hero__top { display: flex; justify-content: space-between; }
-.hero__title { font-family: var(--display); font-weight: 800; font-size: clamp(3.2rem, 15vw, 15rem); line-height: 0.86; letter-spacing: -0.03em; text-transform: uppercase; margin: auto 0; }
+.hero__title { font-family: var(--display); font-weight: 800; font-size: clamp(2.24rem, 10.5vw, 10.5rem); line-height: 0.86; letter-spacing: -0.03em; text-transform: uppercase; margin: auto 0; }
 .hero__title .line { display: block; overflow: hidden; }
 .hero__title .word { display: inline-block; }
 .hero__bottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; }
