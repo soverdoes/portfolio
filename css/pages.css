@@ -9,8 +9,9 @@
 /* ---------- 공통 마스트헤드(페이지 상단 타이틀) ---------- */
 .masthead { padding: clamp(2rem, 6vh, 5rem) var(--pad) clamp(2.5rem, 7vh, 5rem); border-bottom: 1px solid var(--line); }
 .masthead__eyebrow { margin-bottom: 1.5rem; }
-.masthead__title { font-family: var(--display); font-weight: 800; font-size: clamp(2.2rem, 13vw, 12rem); line-height: 0.86; letter-spacing: -0.03em; text-transform: uppercase; }
-.masthead__title em { color: var(--accent); }
+/* 13vw 는 SELECTED(8자) 기준으로 폭을 넘겨 글자가 잘렸음 → 9.5vw
+   1920 에서는 12rem 상한이 걸려 있어 체감 크기 변화가 거의 없음 */
+.masthead__title { font-family: var(--display); font-weight: 800; font-size: clamp(2.2rem, 9.5vw, 12rem); line-height: 0.86; letter-spacing: -0.03em; text-transform: uppercase; }
 /* 좁은 화면에서 SELECTED/STUDIES 같은 긴 단어가 넘치지 않도록 vw 계수 완화 */
 @media (max-width: 560px) { .masthead__title { font-size: clamp(2rem, 9vw, 3.5rem); } }
 .masthead__meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem 2rem; margin-top: clamp(1.5rem, 4vh, 3rem); }

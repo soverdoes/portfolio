@@ -118,8 +118,11 @@ body.menu-open .menu-btn span { background: #0d0d0f; }
 .hero__title { font-family: var(--display); font-weight: 800; font-size: clamp(2.24rem, 10.5vw, 10.5rem); line-height: 0.86; letter-spacing: -0.03em; text-transform: uppercase; margin: auto 0; }
 .hero__title .line { display: block; overflow: hidden; }
 .hero__title .word { display: inline-block; }
-/* SOLVES — 면 없이 흰색 외곽선만 */
-.hero__title em {
+/* 각 페이지 메인 타이틀의 악센트 글자 — 면 없이 흰색 외곽선만
+   index: DESIGN THAT SOLVES / work: Selected WORK
+   projects: Case STUDIES / contact: Let's TALK */
+.hero__title em,
+.masthead__title em {
   color: transparent;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: var(--fg);
