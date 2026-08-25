@@ -274,7 +274,9 @@ a.spotlight__media:hover .spotlight__cta { opacity: 1; transform: translateY(0);
 }
 
 /* ============================================================ 09. CONTACT */
-.contact { background: var(--bg); border-top: 1px solid var(--line); text-align: center; padding-top: clamp(6rem,14vh,12rem); }
+.contact { background: var(--bg); border-top: 1px solid var(--line); text-align: center;
+  /* footer 라 section 의 var(--pad) 를 못 받음 — 직접 지정 */
+  padding: clamp(6rem,14vh,12rem) var(--pad) clamp(2.5rem,6vh,4rem); }
 .contact__eyebrow { margin-bottom: 2rem; }
 .contact__mail { display: inline-block; font-family: var(--display); font-weight: 800; font-size: clamp(1.5rem, 4.8vw, 4.5rem); line-height: 1; letter-spacing: -0.03em;
   /* 좁은 화면에서 메일 주소가 넘치지 않도록 (anywhere 라야 min-content 도 줄어듦) */
