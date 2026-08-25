@@ -123,8 +123,12 @@ body.menu-open .menu-btn span { background: #0d0d0f; }
    projects: Case STUDIES / contact: Let's TALK */
 .hero__title em,
 .masthead__title em {
-  color: transparent;
-  -webkit-text-fill-color: transparent;
+  /* fill 을 '투명' 이 아니라 '배경색' 으로 두는 이유:
+     Syne 의 W·A·V 는 획이 겹치도록 그려진 글리프라, 투명으로 두면
+     안쪽 교차선까지 그려져 선이 겹쳐 보인다. 획을 먼저 칠하고(paint-order)
+     배경색 면으로 덮으면 바깥 윤곽만 남는다. */
+  color: var(--bg);
+  -webkit-text-fill-color: var(--bg);
   -webkit-text-stroke-color: var(--fg);
   -webkit-text-stroke-width: clamp(1.5px, 0.02em, 3.5px);
   paint-order: stroke fill;
