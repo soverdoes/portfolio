@@ -29,7 +29,13 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  /* 한글 줄바꿈은 어절 단위로 — 단어 중간에서 끊지 않음 */
+  word-break: keep-all;
+  /* 한 어절이 칸보다 길 때만 예외적으로 끊어 넘침 방지 */
+  overflow-wrap: break-word;
 }
+/* 대형 타이틀은 강제로 끊지 않음 (APPRO/ACH 처럼 갈라지는 것 방지) */
+h1, h2, h3, .loader__word { overflow-wrap: normal; }
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 em { font-style: normal; color: var(--accent); }
@@ -46,8 +52,8 @@ section { position: relative; padding: clamp(5rem, 12vh, 11rem) var(--pad); }
 }
 .loader.done { transform: translateY(-100%); }
 .loader__row { display: flex; justify-content: space-between; align-items: flex-end; }
-.loader__word { font-family: var(--display); font-weight: 800; font-size: clamp(2rem, 8vw, 6rem); line-height: 0.9; }
-.loader__count { font-family: var(--mono); font-size: clamp(2rem, 8vw, 6rem); color: var(--accent); }
+.loader__word { font-family: var(--display); font-weight: 800; font-size: clamp(1.6rem, 8vw, 6rem); line-height: 0.9; }
+.loader__count { font-family: var(--mono); font-size: clamp(1.6rem, 8vw, 6rem); color: var(--accent); }
 .loader__bar { margin-top: 1.5rem; height: 2px; background: var(--line); }
 .loader__bar span { display: block; height: 100%; width: 0%; background: var(--accent); }
 
@@ -146,8 +152,8 @@ section { position: relative; padding: clamp(5rem, 12vh, 11rem) var(--pad); }
 
 /* ============================================================ 05. SIGNATURE (3개) */
 .spotlights { padding-inline: 0; }
-.spotlights__head { display: flex; justify-content: space-between; align-items: flex-start; padding: 0 var(--pad); margin-bottom: clamp(2rem,6vh,5rem); }
-.spotlights__title { font-family: var(--display); font-weight: 800; font-size: clamp(2.5rem, 9vw, 7rem); line-height: 0.9; text-transform: uppercase; text-align: right; }
+.spotlights__head { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; justify-content: space-between; align-items: flex-start; padding: 0 var(--pad); margin-bottom: clamp(2rem,6vh,5rem); }
+.spotlights__title { font-family: var(--display); font-weight: 800; font-size: clamp(1.85rem, 9vw, 7rem); line-height: 0.9; text-transform: uppercase; text-align: right; }
 .spotlight { margin-bottom: clamp(4rem, 10vh, 9rem); }
 .spotlight:last-child { margin-bottom: 0; }
 .spotlight__media { position: relative; height: min(84vh, 760px); overflow: hidden;
@@ -186,7 +192,7 @@ a.spotlight__media:hover .spotlight__cta { opacity: 1; transform: translateY(0);
 /* ============================================================ 06. APPROACH */
 .approach { border-top: 1px solid var(--line); }
 .approach__intro { max-width: 60ch; margin-bottom: clamp(2.5rem,7vh,5rem); }
-.approach__title { font-family: var(--display); font-weight: 800; font-size: clamp(2.5rem, 9vw, 7rem); text-transform: uppercase; line-height: 1; margin: 1rem 0 1.5rem; }
+.approach__title { font-family: var(--display); font-weight: 800; font-size: clamp(1.85rem, 9vw, 7rem); text-transform: uppercase; line-height: 1; margin: 1rem 0 1.5rem; }
 .approach__lead { font-size: clamp(1.1rem,2.4vw,1.5rem); color: var(--muted); }
 .approach__list { list-style: none; counter-reset: none; }
 .astep { display: grid; grid-template-columns: minmax(4rem, 12vw) 1fr; gap: 1.5rem 3rem; align-items: baseline; padding: clamp(1.5rem,4vh,2.75rem) 0; border-top: 1px solid var(--line); }
@@ -201,8 +207,8 @@ a.spotlight__media:hover .spotlight__cta { opacity: 1; transform: translateY(0);
 
 /* ============================================================ RECOGNITION */
 .awards { border-top: 1px solid var(--line); }
-.awards__head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2.5rem; }
-.awards__title { font-family: var(--display); font-weight: 800; font-size: clamp(2.5rem, 9vw, 7rem); text-transform: uppercase; line-height: 1; }
+.awards__head { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; justify-content: space-between; align-items: baseline; margin-bottom: 2.5rem; }
+.awards__title { font-family: var(--display); font-weight: 800; font-size: clamp(1.85rem, 9vw, 7rem); text-transform: uppercase; line-height: 1; }
 .awards__list { list-style: none; border-top: 1px solid var(--line); }
 .award { display: grid; grid-template-columns: 6rem 1fr auto; gap: 1.5rem; align-items: baseline; padding: clamp(1.1rem,2.6vw,1.9rem) 0.5rem; border-bottom: 1px solid var(--line); transition: padding-left .4s var(--ease), background .4s var(--ease), color .4s var(--ease); }
 .award:hover { padding-left: 1.5rem; background: var(--fg); color: #0d0d0f; }
@@ -217,8 +223,8 @@ a.spotlight__media:hover .spotlight__cta { opacity: 1; transform: translateY(0);
 
 /* ============================================================ 06. SERVICES (스택) */
 .services { background: var(--surface); }
-.services__intro { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3rem; }
-.services__title { font-family: var(--display); font-weight: 800; font-size: clamp(2.5rem, 9vw, 7rem); text-transform: uppercase; line-height: 1; }
+.services__intro { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; justify-content: space-between; align-items: baseline; margin-bottom: 3rem; }
+.services__title { font-family: var(--display); font-weight: 800; font-size: clamp(1.85rem, 9vw, 7rem); text-transform: uppercase; line-height: 1; }
 .services__stack { display: flex; flex-direction: column; gap: 1.25rem; }
 .scard {
   position: sticky; top: calc(14vh + var(--i) * 2.2rem);
@@ -270,7 +276,9 @@ a.spotlight__media:hover .spotlight__cta { opacity: 1; transform: translateY(0);
 /* ============================================================ 09. CONTACT */
 .contact { background: var(--bg); border-top: 1px solid var(--line); text-align: center; padding-top: clamp(6rem,14vh,12rem); }
 .contact__eyebrow { margin-bottom: 2rem; }
-.contact__mail { display: inline-block; font-family: var(--display); font-weight: 800; font-size: clamp(2rem, 9vw, 8rem); line-height: 1; letter-spacing: -0.03em; }
+.contact__mail { display: inline-block; font-family: var(--display); font-weight: 800; font-size: clamp(2rem, 9vw, 8rem); line-height: 1; letter-spacing: -0.03em;
+  /* 좁은 화면에서 메일 주소가 넘치지 않도록 (anywhere 라야 min-content 도 줄어듦) */
+  overflow-wrap: anywhere; }
 .contact__mail:hover { color: var(--accent); }
 .contact__cta { margin-top: 3rem; }
 .btn { display: inline-block; padding: 0.9rem 1.8rem; border: 1px solid var(--fg); border-radius: 100px; font-family: var(--mono); font-size: 0.8rem; text-transform: uppercase; transition: background .3s var(--ease), color .3s var(--ease); }
