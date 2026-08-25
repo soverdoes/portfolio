@@ -141,11 +141,10 @@
     gsap.utils.toArray(".proj").forEach((el) => gsap.from(el, { opacity: 0, y: 40, duration: 0.8, scrollTrigger: { trigger: el, start: "top 88%" } }));
   });
 
-  /* 스포트라이트 3개: 각각 이미지 패럴럭스 + 타이틀 등장 */
+  /* 스포트라이트: 이미지 패럴럭스 (타이틀은 CSS 호버로만 노출) */
   gsap.utils.toArray(".spotlight").forEach((sp) => {
     const img = sp.querySelector(".spotlight__media > img");
     gsap.fromTo(img, { yPercent: -9 }, { yPercent: 9, ease: "none", scrollTrigger: { trigger: sp, start: "top bottom", end: "bottom top", scrub: true } });
-    gsap.from(sp.querySelector(".spotlight__title"), { yPercent: 45, opacity: 0, duration: 1, ease: "power3.out", scrollTrigger: { trigger: sp.querySelector(".spotlight__media"), start: "top 72%" } });
   });
 
   /* Approach 스텝: 순차 등장 */

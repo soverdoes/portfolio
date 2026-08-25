@@ -25,10 +25,19 @@
 .ph__name { position: relative; z-index: 1; color: var(--muted); font-size: 0.72rem; padding: 0.4rem 0.7rem; text-align: center; }
 .ph__dim { position: absolute; left: 0.8rem; bottom: 0.7rem; z-index: 1; color: rgba(240,239,233,0.35); font-size: 0.62rem; }
 .ph--wide { aspect-ratio: 16/9; }
+.ph--band { aspect-ratio: 12/5; }     /* 넓은 띠 (구 .ph--full 대체) */
 .ph--full { aspect-ratio: 21/9; }
-.ph--tall { aspect-ratio: 3/4; }
 .ph--sq { aspect-ratio: 1/1; }
-.ph--phone { aspect-ratio: 9/17; }
+.ph--portrait { aspect-ratio: 4/5; }
+.ph--tall { aspect-ratio: 3/4; }
+.ph--xtall { aspect-ratio: 5/8; }     /* 스크롤형 롱 캡처 */
+.ph--phone { aspect-ratio: 9/19; }
+
+/* 실제 이미지가 들어간 슬롯 — 플레이스홀더 장식 제거 */
+.ph:has(img) { display: block; background: none; border: 0; }
+.ph:has(img)::before { content: none; }
+.ph > img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 6px; }
+.about-hero__band .ph > img { border-radius: 0; }
 
 /* ============================================================ WORK — 아카이브 리스트 */
 .archive { padding: 0 0 clamp(4rem,10vh,8rem); }
@@ -55,7 +64,7 @@
 /* 호버 시 뜨는 썸네일(데스크톱) */
 .arow__thumb { position: absolute; right: clamp(6rem, 22vw, 16rem); top: 50%; width: 220px; z-index: 3;
   opacity: 0; transform: translateY(-50%) scale(0.9); transition: opacity .4s var(--ease), transform .4s var(--ease); pointer-events: none; }
-.arow__thumb .ph { aspect-ratio: 4/3; }
+.arow__thumb .ph { aspect-ratio: 4/5; }
 @media (max-width: 900px) {
   .arow { grid-template-columns: 3rem 1fr; }
   .arow__side { grid-column: 2; gap: 1.25rem; }
@@ -82,12 +91,20 @@
 .case__col p { color: var(--muted); font-size: 1.05rem; line-height: 1.65; }
 @media (max-width: 720px) { .case__cols { grid-template-columns: 1fr; gap: 1.5rem; } }
 /* 갤러리 */
-.case__gallery { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(0.75rem,1.5vw,1.25rem); }
+.case__gallery { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(0.9rem,2vw,1.75rem); align-items: start; }
 .case__gallery .g { grid-column: span 6; }
 .case__gallery .g--full { grid-column: span 12; }
 .case__gallery .g--4 { grid-column: span 4; }
+.case__gallery .g--5 { grid-column: span 5; }
+.case__gallery .g--7 { grid-column: span 7; }
 .case__gallery .g--8 { grid-column: span 8; }
-@media (max-width: 720px) { .case__gallery .g, .case__gallery .g--4, .case__gallery .g--8 { grid-column: span 12; } }
+/* 옆 칸보다 한 박자 내려 배치 — 세로 리듬 */
+.case__gallery .g--drop { margin-top: clamp(2rem, 7vw, 7rem); }
+@media (max-width: 720px) {
+  .case__gallery .g, .case__gallery .g--4, .case__gallery .g--5,
+  .case__gallery .g--7, .case__gallery .g--8 { grid-column: span 12; }
+  .case__gallery .g--drop { margin-top: 0; }
+}
 .case__foot { margin-top: clamp(2rem,5vh,3rem); display: flex; gap: 1rem; flex-wrap: wrap; }
 
 /* prev / next 네비 */
