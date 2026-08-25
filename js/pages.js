@@ -24,7 +24,13 @@
   const btn = document.getElementById("menuBtn");
   const menu = document.getElementById("menu");
   if (!btn || !menu) return;
-  const toggle = (open) => { btn.classList.toggle("open", open); menu.classList.toggle("open", open); };
+  const toggle = (open) => {
+    btn.classList.toggle("open", open);
+    menu.classList.toggle("open", open);
+    document.body.classList.toggle("menu-open", open);
+    btn.setAttribute("aria-expanded", String(open));
+    btn.setAttribute("aria-label", open ? "메뉴 닫기" : "메뉴 열기");
+  };
   btn.addEventListener("click", () => toggle(!menu.classList.contains("open")));
   menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => toggle(false)));
 })();

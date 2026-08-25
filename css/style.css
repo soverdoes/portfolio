@@ -74,7 +74,8 @@ section { position: relative; padding: clamp(5rem, 12vh, 11rem) var(--pad); }
 
 /* ============================================================ 상단바 / 메뉴 */
 .topbar {
-  position: fixed; top: 0; left: 0; width: 100%; z-index: 500;
+  /* .menu(550) 보다 위 — 메뉴가 열려도 닫기 버튼이 같은 자리에 남도록 */
+  position: fixed; top: 0; left: 0; width: 100%; z-index: 600;
   display: flex; align-items: center; justify-content: space-between;
   padding: 1.1rem var(--pad); mix-blend-mode: difference;
 }
@@ -82,10 +83,15 @@ section { position: relative; padding: clamp(5rem, 12vh, 11rem) var(--pad); }
 .topbar__status { font-family: var(--mono); font-size: 0.7rem; text-transform: uppercase; display: flex; align-items: center; gap: 0.5rem; }
 .topbar__status i { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: pulse 1.6s infinite; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
-.menu-btn { z-index: 600; width: 48px; height: 48px; border: 1px solid var(--fg); border-radius: 50%; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
-.menu-btn span { width: 18px; height: 1.5px; background: var(--fg); transition: transform .4s var(--ease); }
+.menu-btn { width: 48px; height: 48px; border: 1px solid var(--fg); transition: border-color .4s var(--ease); border-radius: 50%; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
+.menu-btn span { width: 18px; height: 1.5px; background: var(--fg); transition: transform .4s var(--ease), background .4s var(--ease); }
 .menu-btn.open span:nth-child(1) { transform: translateY(3.25px) rotate(45deg); }
 .menu-btn.open span:nth-child(2) { transform: translateY(-3.25px) rotate(-45deg); }
+/* 메뉴가 열린 동안 — 라임 배경 위에서 읽히도록 블렌드 해제 + 잉크 반전 */
+body.menu-open .topbar { mix-blend-mode: normal; color: #0d0d0f; }
+body.menu-open .topbar__status i { background: #0d0d0f; }
+body.menu-open .menu-btn { border-color: #0d0d0f; }
+body.menu-open .menu-btn span { background: #0d0d0f; }
 @media (max-width: 640px) { .topbar__status { display: none; } }
 
 .menu {
