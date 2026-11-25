@@ -35,6 +35,53 @@
   menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => toggle(false)));
 })();
 
+/* ---------- Projects: 상세 1건 / 목록 전환 ----------
+   projects.html#<slug> → 그 프로젝트만 보여주는 상세 페이지 (이전/다음 포함)
+   projects.html        → 8개 프로젝트 목록                                  */
+(function projectDetail() {
+  const cases = Array.from(document.querySelectorAll("article.case"));
+  const index = document.getElementById("caseIndex");
+  if (!cases.length || !index) return;
+
+  const info = cases.map((c) => ({
+    id: c.id,
+    idx: c.querySelector(".case__idx").textContent.split("/")[0].trim(),
+    title: c.querySelector(".case__title").textContent.trim(),
+    sub: c.querySelector(".case__sub").textContent.trim(),
+  }));
+
+  // 목록
+  index.innerHTML = info.map((p) =>
+    `<li><a href="#${p.id}" data-cursor data-cursor-label="View">` +
+    `<span class="mono case-index__idx">${p.idx}</span>` +
+    `<span class="case-index__title">${p.title}</span>` +
+    `<span class="case-index__sub">${p.sub}</span></a></li>`).join("");
+
+  // 각 상세 하단에 이전/다음
+  cases.forEach((c, i) => {
+    const prev = info[(i - 1 + info.length) % info.length];
+    const next = info[(i + 1) % info.length];
+    const foot = c.querySelector(".case__foot");
+    if (!foot) return;
+    foot.innerHTML =
+      `<a href="#${prev.id}" class="btn" data-cursor>← ${prev.title}</a>` +
+      `<a href="projects.html" class="btn" data-cursor>All Projects</a>` +
+      `<a href="#${next.id}" class="btn" data-cursor>${next.title} →</a>`;
+  });
+
+  const baseTitle = document.title;
+  function render() {
+    const id = decodeURIComponent(location.hash.slice(1));
+    const hit = info.find((p) => p.id === id);
+    document.body.classList.toggle("is-detail", !!hit);
+    cases.forEach((c) => { c.hidden = !hit || c.id !== id; });
+    document.title = hit ? `${hit.title} — 최재성 UX·UI Designer` : baseTitle;
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", render);
+  render();
+})();
+
 /* ---------- 커스텀 커서 + 자석 ---------- */
 (function cursor() {
   const cur = document.getElementById("cursor");

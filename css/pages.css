@@ -109,6 +109,29 @@
 }
 .case__foot { margin-top: clamp(2rem,5vh,3rem); display: flex; gap: 1rem; flex-wrap: wrap; }
 
+/* 통이미지 — PDF 원본 페이지를 이어 붙인 한 장 (폭 1600) */
+.case__full { margin: clamp(2rem,5vh,3.5rem) auto 0; max-width: 1600px; }
+.case__full img { display: block; width: 100%; height: auto; }
+.case[hidden] { display: none; }
+
+/* 상세 모드: 프로젝트 1건만 */
+.is-detail .masthead { display: none; }
+.is-detail .case { background: none; border-bottom: 0; padding-top: clamp(7rem,14vh,10rem); }
+.is-detail .case__foot { justify-content: space-between; margin-top: clamp(3rem,8vh,5rem); }
+
+/* 목록 모드 */
+.case-index { list-style: none; margin-top: clamp(3rem,8vh,6rem); border-top: 1px solid var(--line); }
+.case-index a { display: grid; grid-template-columns: 4rem 24rem 1fr; gap: 1.5rem; align-items: baseline; padding: 1.6rem 0; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; transition: color .3s var(--ease); }
+.case-index a:hover { color: var(--accent); }
+.case-index__idx { color: var(--muted); }
+.case-index__title { font-family: var(--display); font-weight: 800; font-size: clamp(1.4rem,2.6vw,2.2rem); white-space: nowrap; text-transform: uppercase; line-height: 1; }
+.case-index__sub { color: var(--muted); font-size: 0.98rem; line-height: 1.55; }
+@media (max-width: 720px) {
+  .case-index a { grid-template-columns: 2.5rem 1fr; }
+  .case-index__sub { grid-column: 2; }
+  .is-detail .case__foot .btn { flex: 1 1 auto; justify-content: center; }
+}
+
 /* prev / next 네비 */
 .pager { display: flex; justify-content: space-between; gap: 1rem; padding: clamp(2.5rem,6vh,4rem) var(--pad); }
 .pager a { font-family: var(--display); font-weight: 700; font-size: clamp(1.1rem,3vw,2rem); display: flex; flex-direction: column; gap: 0.3rem; }
